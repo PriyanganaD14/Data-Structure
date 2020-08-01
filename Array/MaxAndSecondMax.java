@@ -15,12 +15,13 @@ class MaxAndSecondMax {
             arr[i]=x;
         }   
 
-       System.out.println("Second Largest Element :"+maxAndSecondMax(sizeOfArray,arr));
+      // System.out.println("Second Largest Element :"+maxAndSecondMax(sizeOfArray,arr));
+      System.out.print("Arraylist :"+maxAndSecondMax(sizeOfArray, arr));
 
     }
 
-    public static Integer maxAndSecondMax(int n,int ar[]){                      
-     // ArrayList<Integer>maxAndSecondMax=new ArrayList<Integer>();             //creat an array list to increase and decrease the the size of the array.
+    public static ArrayList<Integer> maxAndSecondMax(int n,int ar[]){                      
+      ArrayList<Integer>maxAndSecondMax=new ArrayList<Integer>();             //creat an array list to increase and decrease the the size of the array.
         int max=Integer.MIN_VALUE;                                       //set max value to integer min value=-2147483648
         int secondMax=Integer.MIN_VALUE;
 
@@ -40,16 +41,20 @@ class MaxAndSecondMax {
 
         }
 
-        System.out.println("Largest Element :"+max);
+       // System.out.println("Largest Element :"+max);
 
        if(secondMax==Integer.MIN_VALUE){
-            return -1;
+            secondMax=-1;
+            maxAndSecondMax.add(max);
+            maxAndSecondMax.add(secondMax);
         }
         else{
-            return secondMax;
+            maxAndSecondMax.add(max);
+            maxAndSecondMax.add(secondMax);
         }
     
 
+        return maxAndSecondMax;
         
     }
 
