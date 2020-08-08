@@ -36,9 +36,9 @@ public class EqulibriumPointNaiveSolution2 {
 
         for (int i = 0; i < n; i++) {                    //travers loop for compare in every index to find equal point
 
-            int l_s = sum - arr[i];                        // sumation of left elements=sum of total element -current index
+            int r_s = sum - arr[i];                        // sumation of right elements=sum of total element -current index
 
-            if (l_sum == l_s) {                           //compare left sum side sum to right side sum
+            if (l_sum == r_s) {                           //compare left sum side sum to right side sum
 
                 return true;
             }
