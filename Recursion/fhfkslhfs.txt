@@ -1,0 +1,3 @@
+i/p: abc
+o/p: abc acb bac bca cab cba
+
